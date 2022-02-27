@@ -21,3 +21,11 @@ repos:
         args: [--wrap, '80', --check]
         language: system
         types: [markdown]
+-   repo: local
+    hooks:
+    -   id: black
+        name: black
+        entry: poetry run black
+        args: [--line-length, '80', --check]
+        language: system
+        types: [python]
