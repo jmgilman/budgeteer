@@ -13,3 +13,11 @@ repos:
         args: [--staged, --msg-filename]
         language: system
         stages: [commit-msg]
+-   repo: local
+    hooks:
+    -   id: mdformat
+        name: mdformat
+        entry: poetry run mdformat
+        args: [--wrap, '80', --check]
+        language: system
+        types: [markdown]
