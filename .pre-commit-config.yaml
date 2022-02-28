@@ -40,6 +40,13 @@ repos:
     hooks:
     -   id: flake8
         name: flake8
-        entry: flake8
+        entry: poetry run flake8
+        language: system
+        types: [python]
+-   repo: local
+    hooks:
+    -   id: bandit
+        name: bandit
+        entry: poetry run bandit
         language: system
         types: [python]
